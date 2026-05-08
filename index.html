@@ -308,11 +308,43 @@
     }
 
     .section-title {
-      font-family: Cinzel, serif;
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin-bottom: 22px;
+  font-family: Cinzel, serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  position: relative;
+  color: #f1eadc;
+
+  text-shadow:
+    0 0 4px rgba(255,120,40,.35),
+    0 0 10px rgba(255,80,20,.35),
+    0 0 18px rgba(155,17,30,.25);
+
+  animation: emberGlow 3s ease-in-out infinite alternate;
+}
+    @keyframes emberGlow {
+  0% {
+    text-shadow:
+      0 0 4px rgba(255,120,40,.25),
+      0 0 10px rgba(255,80,20,.25),
+      0 0 18px rgba(155,17,30,.15);
+  }
+
+  50% {
+    text-shadow:
+      0 0 6px rgba(255,140,60,.45),
+      0 0 14px rgba(255,90,30,.45),
+      0 0 26px rgba(155,17,30,.35);
+  }
+
+  100% {
+    text-shadow:
+      0 0 5px rgba(255,120,40,.3),
+      0 0 12px rgba(255,80,20,.35),
+      0 0 20px rgba(155,17,30,.2);
+  }
+}
     }
 
     .section-title small {
