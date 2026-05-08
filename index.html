@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashes Before Dawn | A Redemption Prequel</title>
   <meta name="description" content="Ashes Before Dawn: A Redemption Prequel. Before Redemption, there was ruin." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --black: #050505;
@@ -105,9 +108,19 @@
     .ember:nth-child(8) { left: 95%; animation-duration: 14s; animation-delay: 0s; }
 
     @keyframes rise {
-      from { transform: translateY(0) rotate(18deg); opacity: 0; }
-      15% { opacity: .7; }
-      to { transform: translateY(-120vh) translateX(40px) rotate(35deg); opacity: 0; }
+      from {
+        transform: translateY(0) rotate(18deg);
+        opacity: 0;
+      }
+
+      15% {
+        opacity: .7;
+      }
+
+      to {
+        transform: translateY(-120vh) translateX(40px) rotate(35deg);
+        opacity: 0;
+      }
     }
 
     header {
@@ -162,7 +175,7 @@
         linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.92)),
         radial-gradient(circle at 25% 72%, rgba(155,17,30,.45), transparent 20%),
         radial-gradient(circle at 72% 73%, rgba(31,109,255,.28), transparent 18%),
-        url('Assets/Covers/Ashes_Before_Dawn_cover_redone.png') center/cover no-repeat;
+        url('assets/Covers/Ashes_Before_Dawn_cover_redone.png') center/cover no-repeat;
     }
 
     .hero::before {
@@ -263,6 +276,9 @@
       letter-spacing: .14em;
       text-transform: uppercase;
       transition: .25s ease;
+      background: transparent;
+      color: var(--pale);
+      cursor: pointer;
     }
 
     .btn.primary {
@@ -284,8 +300,10 @@
       border-radius: 8px;
       background:
         linear-gradient(to bottom, rgba(0,0,0,.15), rgba(0,0,0,.55)),
-        url('Assets/Covers/Ashes_Before_Dawn_cover_redone.png') center/cover no-repeat;
-      box-shadow: 0 28px 80px rgba(0,0,0,.85), 0 0 45px rgba(155,17,30,.18);
+        url('assets/Covers/Ashes_Before_Dawn_cover_redone.png') center/cover no-repeat;
+      box-shadow:
+        0 28px 80px rgba(0,0,0,.85),
+        0 0 45px rgba(155,17,30,.18);
       position: relative;
       overflow: hidden;
     }
@@ -294,7 +312,12 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(115deg, transparent 0 52%, rgba(255,255,255,.18) 53%, transparent 54% 100%);
+      background: linear-gradient(
+        115deg,
+        transparent 0 52%,
+        rgba(255,255,255,.18) 53%,
+        transparent 54% 100%
+      );
       opacity: .3;
     }
 
@@ -308,66 +331,16 @@
     }
 
     .section-title {
-  font-family: Cinzel, serif;
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  margin-bottom: 22px;
-  position: relative;
-  color: #f1eadc;
-      
-      .story-subtitle {
-  font-family: Cinzel, serif;
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--ash);
-  margin-top: -8px;
-  margin-bottom: 28px;
-
-  text-shadow:
-    0 0 4px rgba(255,120,40,.18),
-    0 0 10px rgba(255,80,20,.12);
-}
-
-  text-shadow:
-    0 0 4px rgba(255,120,40,.35),
-    0 0 10px rgba(255,80,20,.35),
-    0 0 18px rgba(155,17,30,.25);
-
-  animation: emberGlow 3s ease-in-out infinite alternate;
-}
-    @keyframes emberGlow {
-  0% {
-    text-shadow:
-      0 0 4px rgba(255,120,40,.25),
-      0 0 10px rgba(255,80,20,.25),
-      0 0 18px rgba(155,17,30,.15);
-  }
-
-  50% {
-    text-shadow:
-      0 0 6px rgba(255,140,60,.45),
-      0 0 14px rgba(255,90,30,.45),
-      0 0 26px rgba(155,17,30,.35);
-  }
-
-  100% {
-    text-shadow:
-      0 0 5px rgba(255,120,40,.3),
-      0 0 12px rgba(255,80,20,.35),
-      0 0 20px rgba(155,17,30,.2);
-  }
-      background: linear-gradient(
-  to bottom,
-  #f1eadc 65%,
-  #ff944d 82%,
-  #9b111e 100%
-);
-
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
+      font-family: Cinzel, serif;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      color: #f1eadc;
+      text-shadow:
+        0 0 4px rgba(255,120,40,.35),
+        0 0 10px rgba(255,80,20,.35),
+        0 0 18px rgba(155,17,30,.25);
     }
 
     .section-title small {
@@ -378,6 +351,16 @@
       margin-bottom: 12px;
     }
 
+    .story-subtitle {
+      font-family: Cinzel, serif;
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ash);
+      margin-top: -8px;
+      margin-bottom: 28px;
+    }
+
     .two-col {
       display: grid;
       grid-template-columns: .9fr 1.1fr;
@@ -386,14 +369,19 @@
     }
 
     .panel {
-      background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.025));
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.025)
+      );
       border: 1px solid var(--line);
       border-radius: 20px;
       padding: 30px;
       box-shadow: 0 20px 60px rgba(0,0,0,.35);
     }
 
-    .panel p, .story p {
+    .panel p,
+    .story p {
       color: rgba(241,234,220,.78);
       line-height: 1.85;
       margin-bottom: 18px;
@@ -455,6 +443,81 @@
       font-size: .95rem;
     }
 
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .character-card {
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.025)
+      );
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      transition: .35s ease;
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    }
+
+    .character-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200,184,154,.5);
+      box-shadow:
+        0 24px 60px rgba(0,0,0,.45),
+        0 0 28px rgba(155,17,30,.18);
+    }
+
+    .character-image {
+      height: 380px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .character-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,.78),
+        transparent 35%
+      );
+    }
+
+    .character-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease;
+    }
+
+    .character-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .character-content {
+      padding: 26px;
+    }
+
+    .character-content h3 {
+      font-family: Cinzel, serif;
+      color: var(--ash);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+
+    .character-content p {
+      color: rgba(241,234,220,.74);
+      line-height: 1.8;
+      font-size: .96rem;
+    }
+
     .excerpt {
       background:
         linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.88)),
@@ -481,7 +544,12 @@
       width: 140px;
       height: 1px;
       margin: 30px auto;
-      background: linear-gradient(to right, transparent, var(--ash), transparent);
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--ash),
+        transparent
+      );
     }
 
     .signup {
@@ -526,6 +594,7 @@
     }
 
     @media (max-width: 880px) {
+
       .hero-inner,
       .two-col {
         grid-template-columns: 1fr;
@@ -548,29 +617,46 @@
         justify-content: center;
       }
 
-      .cards {
+      .cards,
+      .character-grid {
         grid-template-columns: 1fr;
+      }
+
+      .character-image {
+        height: 320px;
       }
 
       form {
         grid-template-columns: 1fr;
       }
     }
+
   </style>
 </head>
+
 <body>
+
   <div class="embers" aria-hidden="true">
-    <span class="ember"></span><span class="ember"></span><span class="ember"></span><span class="ember"></span>
-    <span class="ember"></span><span class="ember"></span><span class="ember"></span><span class="ember"></span>
+    <span class="ember"></span>
+    <span class="ember"></span>
+    <span class="ember"></span>
+    <span class="ember"></span>
+    <span class="ember"></span>
+    <span class="ember"></span>
+    <span class="ember"></span>
+    <span class="ember"></span>
   </div>
 
   <div class="page">
+
     <header>
       <nav>
         <a href="#home" class="brand">Ross Evans</a>
+
         <div class="nav-links">
           <a href="#story">Story</a>
           <a href="#world">World</a>
+          <a href="#characters">Characters</a>
           <a href="#excerpt">Excerpt</a>
           <a href="#updates">Updates</a>
         </div>
@@ -578,175 +664,324 @@
     </header>
 
     <main id="home" class="hero">
+
       <div class="hero-inner">
+
         <div>
           <p class="eyebrow">Before Redemption</p>
-          <h1>Ashes <span>Before</span> Dawn</h1>
+
+          <h1>
+            Ashes
+            <span>Before</span>
+            Dawn
+          </h1>
+
           <p class="subtitle">A Redemption Prequel</p>
-          <p class="tagline">Before <strong>Redemption</strong>, there was ruin.</p>
-          <p class="hero-copy">
-            Six years before Asher meets Freya, one night splits open beneath the rain. A home invasion. A hit-and-run. A fiancé left dying in the street. Two tragedies collide before either soul understands the shape of what has begun.
+
+          <p class="tagline">
+            Before <strong>Redemption</strong>, there was ruin.
           </p>
+
+          <p class="hero-copy">
+            Six years before Asher meets Freya, one night splits open beneath the rain.
+            A home invasion. A hit-and-run. A fiancé left dying in the street.
+            Two tragedies collide before either soul understands the shape of what has begun.
+          </p>
+
           <div class="cta-row">
             <a href="#story" class="btn primary">Enter Mastic Harbor</a>
             <a href="#updates" class="btn">Get Book Updates</a>
           </div>
         </div>
 
-        <div class="cover-card" role="img" aria-label="Ashes Before Dawn book cover placeholder"></div>
+        <div
+          class="cover-card"
+          role="img"
+          aria-label="Ashes Before Dawn book cover">
+        </div>
+
       </div>
+
     </main>
 
     <section id="story">
+
       <div class="container two-col">
+
         <div class="panel">
           <p class="quote">
-            Two lives. Two tragedies. One night that changed everything. Some scars are destiny.
+            Two lives. Two tragedies. One night that changed everything.
+            Some scars are destiny.
           </p>
         </div>
-        <div class="story">
-          <h2 class="section-title">
-    The Story
-</h2>
 
-<h3 class="story-subtitle">
-    When Ruin Answers First
-</h3>
-        </p>
-                        
+        <div class="story">
+
+          <h2 class="section-title">
+            The Story
+          </h2>
+
+          <h3 class="story-subtitle">
+            When Ruin Answers First
+          </h3>
+
           <p>
-            In the town of <strong>Mastic Harbor</strong>, the rain does not simply fall. It hides things. It carries sirens through empty streets. It turns broken glass into glitter and blood into memory.
+            In the town of <strong>Mastic Harbor</strong>, the rain does not simply fall.
+            It hides things. It carries sirens through empty streets.
+            It turns broken glass into glitter and blood into memory.
           </p>
+
           <p>
-            Asher has just asked Sara to marry him. For one impossible moment, the future feels close enough to touch. Then a dark sedan tears through the night, and everything he believed was waiting for him is left bleeding beneath the storm.
+            Asher has just asked Sara to marry him.
+            For one impossible moment, the future feels close enough to touch.
+            Then a dark sedan tears through the night, and everything he believed was waiting for him is left bleeding beneath the storm.
           </p>
+
           <p>
-            On that same night, Freya dies and falls into Hell. Their paths do not cross yet, but fate has already put its hands on both of them. This is Asher’s story before Redemption. Before Freya. Before the truth. Before dawn. </p>
-          <p>
-             </p>
-          <p>
-            </p>
-          <p>
-            
+            On that same night, Freya dies and falls into Hell.
+            Their paths do not cross yet, but fate has already put its hands on both of them.
+            This is Asher’s story before Redemption.
+            Before Freya.
+            Before the truth.
+            Before dawn.
           </p>
+
         </div>
+
       </div>
+
     </section>
 
     <section id="world">
+
       <div class="container">
-        <h2 class="section-title"><small>The World</small></p><p>Mastic Harbor</p></h2>
+
+        <h2 class="section-title">
+          <small>The World</small>
+          Mastic Harbor
+        </h2>
+
         <p style="max-width: 760px; color: rgba(241,234,220,.76); line-height: 1.85;">
-          A rain-streaked town of old money, quiet streets, neon diner signs, police lights, and secrets buried under polished lawns. Mastic Harbor is not real, but the grief inside it is.
+          A rain-streaked town of old money, quiet streets, neon diner signs,
+          police lights, and secrets buried under polished lawns.
+          Mastic Harbor is not real, but the grief inside it is.
         </p>
 
         <div class="cards">
+
           <article class="card">
             <h3>Noir Tragedy</h3>
-            <p>Modern streets, shattered windows, flashing lights, and a crime scene that becomes the first crack in Asher’s soul.</p>
+
+            <p>
+              Modern streets, shattered windows, flashing lights,
+              and a crime scene that becomes the first crack in Asher’s soul.
+            </p>
           </article>
+
           <article class="card">
             <h3>Dark Fantasy</h3>
-            <p>Embers and ash bleed through the ordinary world, hinting at the infernal story unfolding just beyond sight.</p>
+
+            <p>
+              Embers and ash bleed through the ordinary world,
+              hinting at the infernal story unfolding just beyond sight.
+            </p>
           </article>
+
           <article class="card">
             <h3>Redemption’s Shadow</h3>
-            <p>Long before Asher and Freya meet, their lives are marked by the same night, the same storm, and the same ruin.</p>
+
+            <p>
+              Long before Asher and Freya meet,
+              their lives are marked by the same night,
+              the same storm, and the same ruin.
+            </p>
           </article>
+
         </div>
+
       </div>
+
+    </section>
+
+    <section id="characters">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          <small>The People</small>
+          Characters
+        </h2>
+
+        <p style="max-width: 760px; color: rgba(241,234,220,.76); line-height: 1.85; margin-bottom: 42px;">
+          Before fate bound their stories together,
+          they were simply people trying to survive the night that changed everything.
+        </p>
+
+        <div class="character-grid">
+
+          <article class="character-card">
+
+            <div class="character-image">
+              <img src="assets/Asher_Stanton.png" alt="Asher Stanton">
+            </div>
+
+            <div class="character-content">
+              <h3>Asher Stanton</h3>
+
+              <p>
+                A man standing on the edge of the life he always wanted.
+                One storm steals that future away and leaves behind something harder,
+                colder, and dangerous.
+              </p>
+            </div>
+
+          </article>
+
+          <article class="character-card">
+
+            <div class="character-image">
+              <img src="assets/Liz_Stanton.png" alt="Liz Stanton">
+            </div>
+
+            <div class="character-content">
+              <h3>Liz Stanton</h3>
+
+              <p>
+                Fiercely loyal and caught in the aftermath of tragedy,
+                Liz becomes one of the few people still trying to hold broken lives together.
+              </p>
+            </div>
+
+          </article>
+
+          <article class="character-card">
+
+            <div class="character-image">
+              <img src="assets/Sara.jpg" alt="Sara">
+            </div>
+
+            <div class="character-content">
+              <h3>Sara</h3>
+
+              <p>
+                Strong-willed and fiercely compassionate,
+                Sara represents the future Asher thought he still had
+                before the rain took everything from him.
+              </p>
+            </div>
+
+          </article>
+
+          <article class="character-card">
+
+            <div class="character-image">
+              <img src="assets/Richard_Transton.jpg" alt="Richard Transton">
+            </div>
+
+            <div class="character-content">
+              <h3>Richard Transton</h3>
+
+              <p>
+                Brilliant, observant, and carrying secrets older than anyone realizes,
+                Richard sees patterns in chaos long before others understand the danger.
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
     </section>
 
     <section id="excerpt" class="excerpt">
-      <div class="excerpt-box">
-        <h2 class="section-title"><small>The Call</small></h2>
-        <div class="divider"></div>
-        <p class="excerpt-text">
-         The rain had started before midnight and never really stopped. 
-                    </p>
-         <p>
-        It filled the streets with puddles and drummed stedily against rooftops abd pavement alike.
-          In the last hour it had grown heavier, turning the night into a dark curtain of water. The dark skies and relentless rain felt ominous. Like the universe itself was issuing some kind of warning.
-              <p>
-          Officer Daniel Hargrove tapped the steering wheel of his patrol car as the wipers pushed sheets of water across the windshield in slow, steady arcs.
-          </p>
-          <p>
-            The radio crackled. “Unit twelve respond to a possible home invasion. Caller reports sounds of breaking glass and yelling. Address is fourteen eighty-two Willow Crest.”
-          </p>
-          <p>
-          Hargrove sighed. “Well here we go. Unit twelve responding.”
-          </p>
-          <p>
-            Most of these calls ended the same way. Two people that had entirely too much to drink, work up the courage or stupidity to say things they never should or would have, had they been sober. 
-          </p>
-          <p>
-            Or kids sneaking into houses that weren’t theirs, just to prove they could to their friends, or seeking a cheap thrill. Probably a combination of both.
-          </p>
-          <p>
-            Occasionally it was something worse. Something that left him with bad dreams for a while. The kind that have you waking up in the middle of the night. 
-          </p>
-          <p>
-            He pulled onto Willow Crest. The street lived up to its name. Nearly every house had a willow tree hanging over the lawn. The lawns themselves were perfectly landscaped and hedges trimmed to perfection, 
 
-            each tree seemed to be manicured with care as they grew. Even through the hard rain, he could tell this was a well-off neighborhood. The kind where they had gardeners and maids.
-          </p>
-          <p>
-            As he pulled up, he could immediately feel the change in the air. He could tell this wasn’t going to be kids or drunks. This was going to be something worse. Everything felt off.
-          </p>
-          <p>
-            Hargrove stepped out of the cruiser, rain immediately soaking through the shoulders of his uniform. He went up to the front door and knocked. “Police.” No one answered. He tried the door, but it was locked. 
-          </p>
-          <p>
-            He decided to make his way around to the back of the home. It was an immense two story house. On any other day, he might have noticed the architecture, but not today. 
-            He barely noticed the marble stairs leading to the back door. His eyes were focused on the French doors as they hung open, one of them had a broken pane of glass. 
-            Slowly and with his weapon drawn, he made his way up to the top.
-          </p>
-          <p>
-            He spoke into his radio, “Dispatch, home has been broken into, requesting backup!”
-          </p>
-          <p>
-            The lights blazed inside the house. But it was the eerie silence that seemed to fill the air, that left him holding his breath.
-          </p>
-          <p>
-            The smell hit him before he reached the doorway. Blood. Metallic and thick in the air.
-            His stomach tightened. No matter how many times you encountered it, that smell never stopped meaning the same thing. That combined with the fact that the kitchen looked like a bomb had gone off, confirmed his fears.
-          </p>
-          <p>
-            Everywhere he looked furniture was overturned. Glass was scattered across the floor. 
-          </p>
-          <p>
-            From deeper inside the house someone shouted. It was a woman’s voice, “no one was supposed to get hurt, no one was supposed to get killed”
-          </p>
-          <p>
-            Then a gunshot cracked through the air.
-          </p>
-          <p>
-          “Shots fired!” Hargrove barked into the radio. 
-          </p>
-          <p>
-            A figure burst through the back door of the house. They almost collided as he ran right past him into the storm.
-        </p>
+      <div class="excerpt-box">
+
+        <h2 class="section-title">
+          <small>The Call</small>
+          Excerpt
+        </h2>
+
         <div class="divider"></div>
-        <a href="#updates" class="btn primary">Follow the Release</a>
+
+        <p class="excerpt-text">
+          The rain had started before midnight and never really stopped.
+        </p>
+
+        <p>
+          It filled the streets with puddles and drummed steadily against rooftops and pavement alike.
+          In the last hour it had grown heavier, turning the night into a dark curtain of water.
+          The dark skies and relentless rain felt ominous.
+          Like the universe itself was issuing some kind of warning.
+        </p>
+
+        <p>
+          Officer Daniel Hargrove tapped the steering wheel of his patrol car as the wipers pushed sheets of water across the windshield in slow, steady arcs.
+        </p>
+
+        <p>
+          The radio crackled.
+          “Unit twelve respond to a possible home invasion.
+          Caller reports sounds of breaking glass and yelling.
+          Address is fourteen eighty-two Willow Crest.”
+        </p>
+
+        <p>
+          Hargrove sighed.
+          “Well here we go. Unit twelve responding.”
+        </p>
+
+        <div class="divider"></div>
+
+        <a href="#updates" class="btn primary">
+          Follow the Release
+        </a>
+
       </div>
+
     </section>
 
     <section id="updates" class="signup">
+
       <div class="container">
-        <h2 class="section-title"><small>Stay Close</small>Book Updates</h2>
+
+        <h2 class="section-title">
+          <small>Stay Close</small>
+          Book Updates
+        </h2>
+
         <p>
-          Sign up for news, release details, cover reveals, and updates from the world of Redemption.
+          Sign up for news, release details, cover reveals,
+          and updates from the world of Redemption.
         </p>
+
         <form>
-          <input type="email" placeholder="Email address" aria-label="Email address" />
-          <button class="btn primary" type="submit">Notify Me</button>
+          <input
+            type="email"
+            placeholder="Email address"
+            aria-label="Email address"
+          />
+
+          <button class="btn primary" type="submit">
+            Notify Me
+          </button>
         </form>
+
       </div>
+
     </section>
+
   </div>
 
   <footer>
-    <p>© 2026 Ross Evans. All rights reserved. | Ashes Before Dawn: A Redemption Prequel</p>
+    <p>
+      © 2026 Ross Evans.
+      All rights reserved.
+      | Ashes Before Dawn: A Redemption Prequel
+    </p>
   </footer>
+
 </body>
 </html>
